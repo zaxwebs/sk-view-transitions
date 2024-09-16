@@ -9,7 +9,7 @@
 	$: otherItems = items.filter((item) => item.id !== id)
 </script>
 
-<section class="py-8">
+<section class="py-12">
 	<div class="flex flex-col lg:flex-row gap-10 lg:gap-20">
 		<img
 			src={`/images/${item.id}.jpg`}
@@ -18,7 +18,7 @@
 			alt={item.name}
 		/>
 		<div>
-			<h1 class="text-5xl font-bold tracking-tight text-gray-900">{item.name}</h1>
+			<h1 class="text-5xl font-bold tracking-tight text-slate-900">{item.name}</h1>
 			<p class="mt-3 text-xl text-gray-700">{item.excerpt}</p>
 			<p class="mt-6 text-gray-600 max-w-xl">{item.description}</p>
 			<button
@@ -42,11 +42,13 @@
 		</div>
 	</div>
 </section>
-<section class="py-8">
-	<h2 class="font-bold text-3xl text-black tracking-tight mb-12">Recommended for You</h2>
+<section class="pb-12">
+	<h2 class="font-bold text-2xl text-slate-900 tracking-tight mb-12">
+		Explore More From Our Collection
+	</h2>
 	<div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 gap-y-10">
 		{#each otherItems as item}
-			<a class="item text-black hover:text-teal-700" href="/item/{item.id}">
+			<a class="item text-slate-900 hover:text-teal-700" href="/item/{item.id}">
 				<img
 					src={`/images/${item.id}.jpg`}
 					class="object-cover rounded aspect-[4/3]"
