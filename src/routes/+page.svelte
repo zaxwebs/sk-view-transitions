@@ -9,8 +9,7 @@
 			<a class="item text-black hover:text-teal-700" href="/item/{item.id}">
 				<img
 					src={`/images/${item.id}.jpg`}
-					class="object-cover rounded"
-					style:aspect-ratio="4 / 3"
+					class="object-cover rounded aspect-[4/3]"
 					style={`view-transition-name: item-image-${item.id};`}
 					alt={item.name}
 				/>
